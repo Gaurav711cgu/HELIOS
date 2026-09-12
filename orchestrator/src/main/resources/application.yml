@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: helios-orchestrator
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+helios:
+  infrastructure:
+    mode: file
+  state:
+    snapshot-path: ./data/helios-state.bin
+  events:
+    log-path: ./data/helios-events.log
+  dynamodb:
+    endpoint: http://localhost:8000
+    table-name: helios-workflow-state
+  kafka:
+    bootstrap-servers: localhost:9092
+  redis:
+    host: localhost
+    port: 6379
+  aws:
+    region: us-east-1
+  synthesis:
+    mode: parser
+    anthropic:
+      model: claude-sonnet-4-6
+      messages-uri: https://api.anthropic.com/v1/messages
+  quota:
+    capacity: 10000
+    refill-per-second: 10000
+  tuning:
+    max-concurrent-workflows: 2000
+    polling-interval-ms: 50
+    db-connection-pool: 200

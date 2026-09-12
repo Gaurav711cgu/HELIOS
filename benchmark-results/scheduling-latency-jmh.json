@@ -1,0 +1,11 @@
+{
+  "benchmark" : "trigger-to-first-step",
+  "samples" : 100,
+  "unit" : "microseconds",
+  "p50" : 10559,
+  "p95" : 22992,
+  "p99" : 113688,
+  "min" : 6165,
+  "max" : 124976,
+  "realInfrastructure" : [ "DynamoDB Local", "Kafka", "Redis" ]
+}

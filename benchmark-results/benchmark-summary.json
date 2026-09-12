@@ -1,0 +1,245 @@
+{
+  "throughput" : {
+    "benchmark" : "workflow-trigger",
+    "samples" : 1000,
+    "unit" : "microseconds",
+    "p50" : 16367,
+    "p95" : 693171,
+    "p99" : 1156815,
+    "min" : 10680,
+    "max" : 1339814,
+    "realInfrastructure" : [ "DynamoDB Local", "Kafka", "Redis" ],
+    "startedAt" : "2026-09-12T11:40:23.896535300Z",
+    "durationSecondsConfigured" : 20,
+    "targetRatePerSecond" : 50,
+    "submitted" : 1000,
+    "completed" : 1000,
+    "failed" : 0,
+    "elapsedMillis" : 20774,
+    "actualCompletedPerSecond" : 48.1370944449793
+  },
+  "tableName" : "helios-workflow-state-bench-1789213219113",
+  "kafkaBootstrap" : "kafka:29092",
+  "synthesis" : {
+    "reason" : "ANTHROPIC_API_KEY integration is not configured in this harness yet; result is schema-parser validation only and must not be used as AI claim.",
+    "valid" : 50,
+    "realLlmUsed" : false,
+    "cases" : [ {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "send welcome email then provision account then notify analytics"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "charge customer, then generate invoice, then email receipt"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "validate signup, then create profile, then publish user created event"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "reserve inventory, then charge card, then create shipment"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "ingest file, then parse records, then write audit event"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "fetch account data, then call risk service, then approve account"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create workspace, then invite owner, then send onboarding email"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "sync crm contact, then publish kafka event, then notify sales"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "validate order, then reserve credit, then submit order"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "run model inference, then store result, then notify webhook"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "receive image, then scan content, then update moderation queue"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create subscription, then provision plan, then send confirmation"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "import users, then deduplicate users, then send report"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "read payment event, then update ledger, then notify accounting"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create ticket, then assign owner, then send slack notification"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "validate document, then archive document, then emit event"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "start deployment, then wait for health check, then notify release channel"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create tenant, then seed defaults, then publish tenant ready event"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "verify identity, then open account, then email customer"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "receive webhook, then transform payload, then send kafka event"
+    }, {
+      "steps" : 2,
+      "valid" : true,
+      "prompt" : "send password reset email then record audit event"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "provision database then provision service then notify owner"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "cancel subscription then revoke entitlements then send email"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "run backup then verify checksum then publish backup complete event"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "approve expense then pay vendor then notify employee"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "validate claim then request documents then update claim status"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "prepare statement then email statement then archive copy"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create campaign then sync contacts then publish launch event"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "receive support email then classify message then open case"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "detect fraud then freeze card then notify risk team"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create pull request then run checks then notify reviewer"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "parse log file then detect anomalies then create incident"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "receive invoice then extract fields then post ledger entry"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "generate report then upload to s3 then email link"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create customer then create billing profile then publish event"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "close account then revoke tokens then notify compliance"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "validate quote then generate contract then email signer"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "receive shipment update then update order then notify customer"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "start trial then provision sandbox then send getting started email"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "scan repository then create findings then notify security"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create payout then verify bank then submit transfer"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "ingest csv then validate rows then publish import result"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "approve loan then create account then send disclosure email"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create meeting then generate agenda then email attendees"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "receive refund request then validate policy then issue refund"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "open incident then page responder then create status update"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "compile metrics then write dashboard event then notify owner"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "create api key then store secret then send usage guide"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "rotate secret then restart service then notify platform team"
+    }, {
+      "steps" : 3,
+      "valid" : true,
+      "prompt" : "delete user then remove sessions then publish deletion event"
+    } ],
+    "firstPassValidationRate" : 1.0,
+    "total" : 50
+  },
+  "scheduling" : {
+    "benchmark" : "trigger-to-first-step",
+    "samples" : 100,
+    "unit" : "microseconds",
+    "p50" : 10559,
+    "p95" : 22992,
+    "p99" : 113688,
+    "min" : 6165,
+    "max" : 124976,
+    "realInfrastructure" : [ "DynamoDB Local", "Kafka", "Redis" ]
+  },
+  "redisHost" : "redis",
+  "generatedAt" : "2026-09-12T11:43:22.302519215Z",
+  "dynamoEndpoint" : "http://dynamodb-local:8000"
+}

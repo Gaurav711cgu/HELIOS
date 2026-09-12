@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: helios-prod
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helios-orchestrator
+  namespace: helios-prod
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: helios-orchestrator
+  template:
+    metadata:
+      labels:
+        app: helios-orchestrator
+    spec:
+      containers:
+        - name: orchestrator
+          image: helios/orchestrator:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: HELIOS_INFRASTRUCTURE_MODE
+              value: "real"
+            - name: HELIOS_DYNAMODB_ENDPOINT
+              value: "http://dynamodb:8000"
+            - name: HELIOS_KAFKA_BOOTSTRAP_SERVERS
+              value: "kafka:9092"
+            - name: HELIOS_REDIS_HOST
+              value: "redis"
+          livenessProbe:
+            httpGet:
+              path: /api/v1/health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: "1"
+              memory: "2Gi"
+            limits:
+              cpu: "2"
+              memory: "4Gi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: helios-orchestrator-svc
+  namespace: helios-prod
+spec:
+  selector:
+    app: helios-orchestrator
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

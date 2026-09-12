@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package helios.worker.v1;
+
+option java_multiple_files = true;
+option java_package = "com.helios.worker.v1";
+option java_outer_classname = "WorkerServiceProto";
+
+service WorkerService {
+  rpc Register(WorkerInfo) returns (WorkerToken);
+  rpc Poll(PollRequest) returns (TaskLease);
+  rpc Complete(TaskResult) returns (Ack);
+  rpc Heartbeat(HeartbeatRequest) returns (Ack);
+}
+
+message WorkerInfo {
+  string worker_id = 1;
+  string tenant_id = 2;
+  repeated string task_types = 3;
+  int32 max_concurrent_tasks = 4;
+}
+
+message WorkerToken {
+  string token = 1;
+  int64 expires_at_epoch_ms = 2;
+}
+
+message PollRequest {
+  string token = 1;
+  string worker_id = 2;
+  int32 max_tasks = 3;
+}
+
+message TaskLease {
+  string workflow_id = 1;
+  string step_name = 2;
+  int32 attempt_number = 3;
+  string task_type = 4;
+  string idempotency_key = 5;
+  string input_json = 6;
+  int64 lease_expires_at_epoch_ms = 7;
+}
+
+message TaskResult {
+  string token = 1;
+  string workflow_id = 2;
+  string step_name = 3;
+  int32 attempt_number = 4;
+  string idempotency_key = 5;
+  bool success = 6;
+  string output_json = 7;
+  string error_message = 8;
+}
+
+message HeartbeatRequest {
+  string token = 1;
+  string workflow_id = 2;
+  string step_name = 3;
+  int32 attempt_number = 4;
+}
+
+message Ack {
+  bool accepted = 1;
+  string message = 2;
+}

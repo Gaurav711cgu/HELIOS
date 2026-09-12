@@ -1,0 +1,19 @@
+{
+  "benchmark" : "workflow-trigger",
+  "samples" : 1000,
+  "unit" : "microseconds",
+  "p50" : 16367,
+  "p95" : 693171,
+  "p99" : 1156815,
+  "min" : 10680,
+  "max" : 1339814,
+  "realInfrastructure" : [ "DynamoDB Local", "Kafka", "Redis" ],
+  "startedAt" : "2026-09-12T11:40:23.896535300Z",
+  "durationSecondsConfigured" : 20,
+  "targetRatePerSecond" : 50,
+  "submitted" : 1000,
+  "completed" : 1000,
+  "failed" : 0,
+  "elapsedMillis" : 20774,
+  "actualCompletedPerSecond" : 48.1370944449793
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Helios architecture</title>
+  <desc id="desc">Client traffic enters the Spring Boot orchestrator, which coordinates DynamoDB, Kafka, Redis, and observability systems.</desc>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <rect x="70" y="82" width="1060" height="556" rx="12" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+  <rect x="120" y="140" width="240" height="90" rx="8" fill="#fff7e8" stroke="#b47618" stroke-width="3"/>
+  <text x="240" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#141414">Clients</text>
+  <text x="240" y="207" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#5d6572">REST API and Java SDK</text>
+  <path d="M360 185 H480" stroke="#24556d" stroke-width="5" fill="none"/>
+  <polygon points="480,185 464,176 464,194" fill="#24556d"/>
+  <rect x="500" y="104" width="300" height="168" rx="8" fill="#eef7fb" stroke="#24556d" stroke-width="3"/>
+  <text x="650" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#141414">Spring Boot Orchestrator</text>
+  <text x="650" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#5d6572">DAG validation</text>
+  <text x="650" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#5d6572">Virtual-thread execution</text>
+  <text x="650" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#5d6572">Retries and compensation</text>
+  <path d="M650 272 V348" stroke="#24556d" stroke-width="5" fill="none"/>
+  <polygon points="650,348 641,332 659,332" fill="#24556d"/>
+  <rect x="132" y="392" width="210" height="94" rx="8" fill="#eefaf5" stroke="#287a5c" stroke-width="3"/>
+  <text x="237" y="431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#141414">DynamoDB</text>
+  <text x="237" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5d6572">State and indexes</text>
+  <rect x="382" y="392" width="210" height="94" rx="8" fill="#fff1ef" stroke="#b64b41" stroke-width="3"/>
+  <text x="487" y="431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#141414">Kafka</text>
+  <text x="487" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5d6572">Events and DLQ</text>
+  <rect x="632" y="392" width="210" height="94" rx="8" fill="#eefaf5" stroke="#287a5c" stroke-width="3"/>
+  <text x="737" y="431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#141414">Redis</text>
+  <text x="737" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5d6572">Tenant quotas</text>
+  <rect x="882" y="392" width="210" height="94" rx="8" fill="#fff7e8" stroke="#b47618" stroke-width="3"/>
+  <text x="987" y="431" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#141414">Observability</text>
+  <text x="987" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#5d6572">Prometheus and Grafana</text>
+  <path d="M650 348 C650 360 237 360 237 392" stroke="#24556d" stroke-width="4" fill="none"/>
+  <path d="M650 348 C650 360 487 360 487 392" stroke="#24556d" stroke-width="4" fill="none"/>
+  <path d="M650 348 C650 360 737 360 737 392" stroke="#24556d" stroke-width="4" fill="none"/>
+  <path d="M650 348 C650 360 987 360 987 392" stroke="#24556d" stroke-width="4" fill="none"/>
+  <rect x="140" y="552" width="920" height="40" rx="8" fill="#18202b"/>
+  <text x="600" y="578" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#e7edf5">Real test rig: Docker Compose plus Gradle integration tests and benchmark artifacts</text>
+</svg>

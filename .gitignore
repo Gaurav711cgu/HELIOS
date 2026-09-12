@@ -1,0 +1,26 @@
+.gradle/
+build/
+out/
+*.class
+.idea/
+.DS_Store
+.env
+*.log
+__pycache__/
+*.pyc
+.venv/
+data/
+
+# Node.js
+node_modules/
+.next/
+website/node_modules/
+website/.next/
+
+# Gradle
+gradle.zip
+gradle-8.10/
+
+# IDE
+.vscode/
+
